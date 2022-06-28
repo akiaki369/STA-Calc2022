@@ -9,20 +9,27 @@ body {
 
 #description {
     float: left;
+    border-collapse: separate;
+    border-spacing: 5px;
 }
 
 #calculator {
     float: right;
 }
 
-caption {
+#description td {
+    font-size: large;
+}
+
+#display {
     font-size: 50px;
     text-align: right;
     background-color: white;
     border-radius: 10px;
+    margin-bottom: 2%;
 }
 
-button {
+#calculator button {
     font-size: 25px;
     height: 100px;
     width: 100px;
@@ -40,10 +47,10 @@ button {
     color: white;
 }
 
-button:hover {
+#calculator button:hover {
     background-color: lightgray;
 }
 
-button:active {
+#calculator button:active {
     background-color: gray;
 }

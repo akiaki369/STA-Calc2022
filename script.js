@@ -1,76 +1,58 @@
+// フィールド
 let number = 0;
-
 const stack = [];
 
+// 表示部の要素を取得
 function getElement() {
     let element = document.getElementById('display');
     return element;
 }
 
+// 入力した数値を表示する
 function addNum(num) {
-    element = getElement();
     number *= 10;
     number += num;
+    element = getElement();
     element.innerHTML = number;
 }
 
+// 数値をスタックに積む
 function ok() {
     stack.push(number);
-    element = getElement();
-    element.innerHTML = 0;
     number = 0;
-}
-
-function plus() {
-    let number1 = stack.pop();
-    let number2 = stack.pop();
-    let ans = number1 + number2;
-    stack.push(ans);
     element = getElement();
     element.innerHTML = 0;
 }
 
-function minus() {
-    let number1 = stack.pop();
-    let number2 = stack.pop();
-    let ans = number2 - number1;
-    stack.push(ans);
+// 演算子を判断して計算する
+function calc(operand) {
+    let num1 = stack.pop();
+    let num2 = stack.pop();
+    let ans = 0;
     element = getElement();
-    element.innerHTML = 0;
+
+    if (operand == '+') {
+        ans = num1 + num2;
+    } else if (operand == '-') {
+        ans = num2 - num1;
+    } else if (operand == '×') {
+        ans = num1 * num2;
+    } else if (operand == '÷') {
+        ans = num2 / num1;
+    } else if (operand == '%') {
+        ans = num2 % num1;
+    }
+
+    stack.push(ans);
 }
 
-function multiple() {
-    let number1 = stack.pop();
-    let number2 = stack.pop();
-    let ans = number1 * number2;
-    stack.push(ans);
-    element = getElement();
-    element.innerHTML = 0;
-}
-
-function divide() {
-    let number1 = stack.pop();
-    let number2 = stack.pop();
-    let ans = number2 / number1;
-    stack.push(ans);
-    element = getElement();
-    element.innerHTML = 0;
-}
-
-function mod() {
-    let number1 = stack.pop();
-    let number2 = stack.pop();
-    let ans = number2 % number1;
-    stack.push(ans);
-    element = getElement();
-    element.innerHTML = 0;
-}
-
+// 計算結果を表示する
 function equal() {
     element = getElement();
     element.innerHTML = stack.pop();
 }
 
+// 初期化する
 function allclear() {
     element = getElement();
     element.innerHTML = 0;

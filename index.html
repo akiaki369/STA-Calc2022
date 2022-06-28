@@ -9,37 +9,40 @@
 <body>
 <div id="wrapper">
     <table id="description">
-        <tr><td>電卓(逆ポーランド式)</td></tr>
-        <tr><td>使い方</td></tr>
+        <tr><td><h2>電卓(逆ポーランド式)</h2></td></tr>
+        <tr><td>【使い方】</td></tr>
         <tr>
-            <td>入力する数字を確定したら、OKを押す。</td>
+            <td>
+                <br><strong>入力する数字を確定したら、OKを押す。</strong><br>(0が表示されます)<br><br>
+                例) 12 5 +<br><br>12を入力してOK<br>5を入力してOK<br>+を押す<br>=を押す
+            </td>
         </tr>
     </table>
     <table id="calculator">
         <caption id="display">0</caption>
         <tr>
             <td><button onclick="allclear()" id="ac">AC</button></td>
-            <td><button onclick="mod()">%</button></td>
-            <td><button onclick="divide()">÷</button></td>
+            <td><button onclick="calc('%')">%</button></td>
+            <td><button onclick="calc('÷')">÷</button></td>
             <td><button onclick="equal()">=</button></td>
         </tr>
         <tr>
             <td><button onclick="addNum(7)">7</button></td>
             <td><button onclick="addNum(8)">8</button></td>
             <td><button onclick="addNum(9)">9</button></td>
-            <td><button onclick="multiple()">×</button></td>
+            <td><button onclick="calc('×')">×</button></td>
         </tr>
         <tr>
             <td><button onclick="addNum(4)">4</button></td>
             <td><button onclick="addNum(5)">5</button></td>
             <td><button onclick="addNum(6)">6</button></td>
-            <td><button onclick="minus()">-</button></td>
+            <td><button onclick="calc('-')">-</button></td>
         </tr>
         <tr>
             <td><button onclick="addNum(1)">1</button></td>
             <td><button onclick="addNum(2)">2</button></td>
             <td><button onclick="addNum(3)">3</button></td>
-            <td><button onclick="plus()">+</button></td>
+            <td><button onclick="calc('+')">+</button></td>
         </tr>
         <tr>
             <td><button onclick="addNum(0)">0</button></td>

@@ -2,9 +2,24 @@ body {
     background-color: lightblue;
 }
 
+#wrapper {
+    width: 60%;
+    margin: auto;
+}
+
+#description {
+    float: left;
+}
+
+#calculator {
+    float: right;
+}
+
 caption {
     font-size: 50px;
     text-align: right;
+    background-color: white;
+    border-radius: 10px;
 }
 
 button {
@@ -13,4 +28,22 @@ button {
     width: 100px;
     border-style: hidden;
     border-radius: 50px;
+}
+
+#ac {
+    background-color: red;
+    color: white;
+}
+
+#ok {
+    background-color: blue;
+    color: white;
+}
+
+button:hover {
+    background-color: lightgray;
+}
+
+button:active {
+    background-color: gray;
 }

@@ -43,6 +43,8 @@ function calc(operand) {
         ans = num2 % num1;
     }
 
+    element = getElement();
+    element.innerHTML = operand;
     stack.push(ans);
 }
 
